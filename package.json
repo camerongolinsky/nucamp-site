@@ -1,0 +1,37 @@
+{
+  "name": "nucampsite",
+  "version": "1.0.0",
+  "description": "This is a website for the fictional campsite Nucamp",
+  "main": "index.html ",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "bootstrap-social": "^5.1.1",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "font-awesome": "^4.7.0",
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.14.1",
+    "onchange": "^7.0.0",
+    "parallelshell": "^3.0.1"
+  },
+  "scripts": {
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
+    "start": "npm run watch:all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camerongolinsky/nucamp-site.git"
+  },
+  "author": "Cameron Golinsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camerongolinsky/nucamp-site/issues"
+  },
+  "homepage": "https://github.com/camerongolinsky/nucamp-site#readme"
+}
